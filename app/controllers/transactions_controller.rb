@@ -11,6 +11,10 @@ class TransactionsController < ApplicationController
   def transfer
   end
 
+  def index
+    @transactions = current_user.transactions
+  end
+
   def deposit_update
     User.deposit(current_user,params[:transaction][:amount].to_f, nil)
     flash[:success] = "Your balance is updated."

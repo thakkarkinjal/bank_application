@@ -17,6 +17,9 @@
       <li class="nav-item">
         <%= link_to "View balance", transaction_path(current_user.id), class: "nav-link" %>
       </li>
+      <li class="nav-item">
+        <%= link_to "View transaction", transactions_path, class: "nav-link" %>
+      </li>
     </ul>
       <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-success my-2 my-sm-0" %>
   </div>

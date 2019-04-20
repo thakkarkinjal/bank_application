@@ -28,4 +28,10 @@ class User < ApplicationRecord
     end
   end
 
+  def self.get_user_name(id)
+    user = User.find_by(id: id)
+    user_name = user.first_name.titleize + user.last_name.titleize
+    return user_name
+  end
+
 end
