@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get :transfer
       put :deposit_update
       put :withdraw_update
+      put :transfer_update
     end
   end
 end

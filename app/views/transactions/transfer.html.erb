@@ -1,2 +1,5 @@
-<h1>Transactions#transfer</h1>
-<p>Find me in app/views/transactions/transfer.html.erb</p>
+<%= form_for :user, url: transfer_update_transactions_path, method: :put do |f| %>
+  Recipient account no: <%= f.text_field :account_no %><br />
+  Amount: <%= f.number_field :amount %><br />
+  <%= f.submit %>
+<% end %>
